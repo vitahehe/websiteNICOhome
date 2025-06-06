@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <title>Booking | My Modern Site</title>
+
+  <!-- Google Font: Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Site Logo" />
+        </a>
+      </div>
+      <nav>
+        <div class="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="description.html">About</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Book Your Stay</h2>
+      </div>
+
+      <form
+        class="booking-form"
+        action="/book"
+        method="POST"
+      >
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="e.g., John Doe"
+          required
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="e.g., john@example.com"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="e.g., +32 123 456 789"
+          required
+        />
+
+        <label for="checkin">Check-In Date</label>
+        <input
+          type="date"
+          id="checkin"
+          name="checkin"
+          required
+        />
+
+        <label for="checkout">Check-Out Date</label>
+        <input
+          type="date"
+          id="checkout"
+          name="checkout"
+          required
+        />
+
+        <label for="offer">Select Offer</label>
+        <select id="offer" name="offer" required>
+          <option value="" disabled selected>
+            -- Choose an Offer --
+          </option>
+          <option value="Premium Room">
+            Premium Room – €150/night
+          </option>
+          <option value="Standard Room">
+            Standard Room – €100/night
+          </option>
+          <option value="Budget Room">
+            Budget Room – €70/night
+          </option>
+        </select>
+
+        <button type="submit" class="btn">
+          Confirm Booking
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 My Modern Site. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
